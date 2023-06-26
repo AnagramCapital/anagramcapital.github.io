@@ -282,6 +282,7 @@ const lottieThree = document.getElementById('lottie-3');
 const activeLottie = document.getElementById('lottie-current');
 const nextLottie = document.getElementById('lottie-next');
 const prevLottie = document.getElementById('lottie-prev');
+const finalLottie = document.getElementById('lottie-final');
 
 matchPosition(activeLottie,lottieOne)
 matchPosition(nextLottie,lottieTwo)
@@ -337,7 +338,7 @@ function createTimeline() {
       tl.to([block4],{opacity:1,duration:2,delay:20},'scroll1')
 
       tl.to([block4],{ duration: 24, ...moveTo(finalPosition,block4),delay:14},'scroll1')
-      tl.to([lottieThree],{duration:20,...moveTo(activeLottie, lottieThree),delay:18},'scroll1');
+      tl.to([lottieThree],{duration:20,...moveTo(finalLottie, lottieThree),delay:18},'scroll1');
 
       tl.progress(progress);
     }
